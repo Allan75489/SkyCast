@@ -1,0 +1,77 @@
+    .wc-wrap { display: flex; flex-direction: column; gap: 16px; }
+
+    .wc-main {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: background 0.4s ease, box-shadow 0.2s;
+    backdrop-filter: blur(12px);
+    }
+
+    .wc-main:hover { background: var(--bg-card-hover); }
+    .wc-gradient-line { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gradient-line), transparent); }
+
+    .wc-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; gap: 16px; flex-wrap: wrap; }
+    .wc-city { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 4vw, 32px); color: var(--text-primary); line-height: 1.2; }
+    .wc-flag { font-size: 28px; }
+    .wc-time { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+    .wc-sun { display: flex; flex-direction: column; gap: 4px; text-align: right; font-size: 13px; color: var(--text-secondary); white-space: nowrap; font-family: 'DM Mono', monospace; }
+
+    .wc-temp-row { display: flex; align-items: flex-end; gap: 12px; margin: 24px 0; }
+    .wc-temp { font-family: 'DM Serif Display', serif; font-size: clamp(72px, 14vw, 108px); color: var(--text-primary); line-height: 1; letter-spacing: -4px; }
+    .wc-unit { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--text-muted); padding-bottom: 16px; }
+
+    .wc-cond { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .wc-cond-icon { font-size: 42px; }
+    .wc-cond-label { font-size: 18px; color: var(--text-accent); font-weight: 300; }
+    .wc-feels { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+    .wc-divider { height: 1px; background: var(--border); margin: 20px 0; }
+
+    .wc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center; }
+    .wc-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .wc-stat-value { font-family: 'DM Mono', monospace; font-size: clamp(16px, 3vw, 22px); color: var(--text-secondary); font-weight: 500; }
+    .wc-stat-unit { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+    .wc-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .wc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    transition: background 0.4s ease, transform 0.2s, box-shadow 0.2s;
+    backdrop-filter: blur(12px);
+    }
+
+    .wc-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); background: var(--bg-card-hover); }
+    .wc-card-title { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+
+    .wc-forecast { display: flex; flex-direction: column; gap: 10px; }
+    .wc-forecast-item { display: flex; align-items: center; justify-content: space-between; }
+    .wc-forecast-day { font-size: 13px; color: var(--text-secondary); width: 56px; }
+    .wc-forecast-icon { font-size: 18px; }
+    .wc-forecast-temps { display: flex; gap: 10px; }
+    .wc-temp-max { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--text-primary); }
+    .wc-temp-min { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--text-muted); }
+
+    .wc-hourly { display: flex; flex-direction: column; gap: 10px; }
+    .wc-hourly-item { display: flex; align-items: center; justify-content: space-between; }
+    .wc-hourly-time { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text-muted); width: 44px; }
+    .wc-hourly-icon { font-size: 16px; }
+    .wc-hourly-temp { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text-secondary); }
+    .wc-hourly-rain { font-size: 11px; color: var(--text-accent); }
+
+    /* Responsivo */
+    @media (max-width: 640px) {
+    .wc-main { padding: 24px 20px; border-radius: 20px; }
+    .wc-bottom { grid-template-columns: 1fr; }
+    .wc-sun { display: none; }
+    .wc-header { flex-direction: column; }
+    }

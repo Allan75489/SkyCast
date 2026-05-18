@@ -1,44 +1,43 @@
     import { useWeather } from '../hooks/useWeather';
+    import { useTheme } from '../hooks/useTheme';
     import { SearchBar } from '../components/SearchBar/SearchBar';
     import { WeatherCard } from '../components/WeatherCard/WeatherCard';
     import { Loading } from '../components/Loading/Loading';
+    import '../styles/variables.css';
+    import './Home.css';
 
     export function Home() {
     const { data, location, loading, error, search } = useWeather();
+    const { theme, toggle } = useTheme();
 
     return (
-        <div className="min-h-screen flex flex-col items-center px-5 py-10 relative overflow-hidden">
-        {/* Orbs de fundo */}
-        <div className="fixed w-[500px] h-[500px] -top-36 -left-24 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(56,189,248,0.12) 0%, transparent 70%)', filter: 'blur(80px)' }} />
-        <div className="fixed w-[400px] h-[400px] -bottom-24 -right-24 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 70%)', filter: 'blur(80px)' }} />
+        <div className="home">
+        <div className="home-orb home-orb1" />
+        <div className="home-orb home-orb2" />
 
-        <div className="relative z-10 w-full max-w-2xl">
-            {/* Header */}
-            <div className="text-center mb-9">
-            <h1 className="font-['DM_Serif_Display'] text-5xl text-slate-100 leading-tight tracking-tight">
-                Tempo <em className="text-blue-300">agora</em>
-            </h1>
-            <p className="text-sm text-slate-500 mt-2 font-light tracking-wide">
-                Dados em tempo real via Open-Meteo
-            </p>
+        <div className="home-content">
+            <div className="home-header">
+            <div>
+                <h1 className="home-title">Tempo <em>agora</em></h1>
+                <p className="home-subtitle">Dados em tempo real via Open-Meteo</p>
+            </div>
+            <button className="theme-btn" onClick={toggle} title="Alternar tema">
+                {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
             </div>
 
             <SearchBar onSearch={search} loading={loading} />
 
             {error && (
-            <div className="bg-red-500/10 border border-red-500/20 rounded-2xl px-5 py-4 text-center text-red-300 text-sm mb-4">
-                ⚠️ {error}
-            </div>
+            <div className="home-error">⚠️ {error}</div>
             )}
 
             {loading && <Loading />}
 
             {!loading && !data && !error && (
-            <div className="text-center py-16">
-                <p className="text-6xl mb-4 opacity-30">🌤️</p>
-                <p className="text-slate-500 font-light">Digite uma cidade para ver o clima atual</p>
+            <div className="home-empty">
+                <p className="home-empty-icon">🌤️</p>
+                <p className="home-empty-text">Digite uma cidade para ver o clima atual</p>
             </div>
             )}
 
@@ -46,9 +45,7 @@
             <WeatherCard data={data} location={location} />
             )}
 
-            <p className="text-center text-xs text-slate-700 mt-6">
-            Open-Meteo API · Gratuita, sem API key
-            </p>
+            <p className="home-footer">Open-Meteo API · Gratuita, sem API key</p>
         </div>
         </div>
     );
