@@ -15,21 +15,24 @@ Aplicativo de previsão do tempo em **tempo real**, desenvolvido com **React + T
 
 ---
 
+
 ## ✨ Funcionalidades
 
-✔️ **Busca global** → Pesquise qualquer cidade do mundo  
-✔️ **Temperatura atual** → Inclui sensação térmica  
-✔️ **Condição climática** → Descrição + ícone do clima  
-✔️ **Umidade do ar** → Percentual em tempo real  
-✔️ **Velocidade do vento** → Dados em km/h  
-✔️ **Probabilidade de chuva** → Previsão por hora  
-✔️ **Nascer e pôr do sol** → Horários locais  
-✔️ **Previsão para 7 dias** → Informações futuras  
-✔️ **Próximas 8 horas** → Detalhamento climático  
-✔️ **Bandeira do país** → Identificação automática  
-✔️ **Fuso horário local** → Hora exata da cidade pesquisada  
-✔️ **Tema claro/escuro** → Alternância dinâmica  
-✔️ **Design responsivo** → Mobile, tablet e desktop  
+| Feature | Descrição |
+|---|---|
+| 🔍 Busca global | Pesquise qualquer cidade do mundo |
+| 🌡️ Temperatura real | Temperatura atual e sensação térmica |
+| ☁️ Condição climática | Descrição e ícone do tempo atual |
+| 💧 Umidade | Percentual de umidade do ar |
+| 💨 Vento | Velocidade em km/h |
+| 🌧️ Chuva | Probabilidade por hora |
+| 🌅 Sol | Horário de nascer e pôr do sol |
+| 🗓️ Previsão | 7 dias à frente |
+| 🕐 Horas | Próximas 8 horas detalhadas |
+| 🇧🇷 Bandeira | Bandeira do país da cidade buscada |
+| 🌐 Fuso horário | Hora local exata de cada cidade |
+| 🌙 Tema | Alternância entre modo claro e escuro |
+| 📱 Responsivo | Mobile, tablet e desktop |
 
 ---
 
