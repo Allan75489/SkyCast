@@ -45,7 +45,6 @@
             <WeatherCard data={data} location={location} />
             )}
 
-            <p className="home-footer">Open-Meteo API · Gratuita, sem API key</p>
         </div>
         </div>
     );
