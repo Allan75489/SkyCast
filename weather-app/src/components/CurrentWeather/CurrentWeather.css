@@ -1,0 +1,140 @@
+.cw-main {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: background 0.4s ease, box-shadow 0.2s;
+  backdrop-filter: blur(12px);
+}
+
+.cw-main:hover {
+  background: var(--bg-card-hover);
+}
+
+.cw-gradient-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gradient-line), transparent);
+}
+
+.cw-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cw-city {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(22px, 4vw, 32px);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.cw-flag {
+  font-size: 28px;
+}
+
+.cw-time {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.cw-header-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cw-fav-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px;
+  color: var(--text-muted);
+  transition: transform 0.15s;
+}
+
+.cw-fav-btn:hover {
+  transform: scale(1.15);
+}
+
+.cw-fav-btn.is-active {
+  color: #facc15;
+}
+
+.cw-temp-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.cw-temp {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(72px, 14vw, 108px);
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.cw-unit {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: var(--text-muted);
+  padding-bottom: 16px;
+}
+
+.cw-cond {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.cw-cond-icon {
+  font-size: 42px;
+}
+
+.cw-cond-label {
+  font-size: 18px;
+  color: var(--text-accent);
+  font-weight: 300;
+}
+
+.cw-feels {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.cw-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+@media (max-width: 640px) {
+  .cw-main {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .cw-header {
+    flex-direction: column;
+  }
+  .cw-header-actions {
+    align-self: flex-start;
+  }
+}

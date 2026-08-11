@@ -1,0 +1,17 @@
+{
+  "name": "SkyCast — Previsão do Tempo",
+  "short_name": "SkyCast",
+  "description": "Previsão do tempo em tempo real para cidades do mundo inteiro.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,19 +1,21 @@
-    import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-    export type Theme = 'dark' | 'light';
+export type Theme = 'dark' | 'light';
 
-    export function useTheme() {
-    const [theme, setTheme] = useState<Theme>(() => {
-        const saved = localStorage.getItem('weather-theme');
-        return (saved as Theme) ?? 'dark';
-    });
+const STORAGE_KEY = 'weather-theme';
 
-    useEffect(() => {
-        localStorage.setItem('weather-theme', theme);
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [theme]);
+export function useTheme() {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return (saved as Theme) ?? 'dark';
+  });
 
-    const toggle = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, theme);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
-    return { theme, toggle };
-    }
+  const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+
+  return { theme, toggle };
+}

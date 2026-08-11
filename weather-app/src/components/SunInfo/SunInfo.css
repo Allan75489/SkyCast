@@ -1,0 +1,16 @@
+.sun-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+}
+
+@media (max-width: 640px) {
+  .sun-info {
+    display: none;
+  }
+}

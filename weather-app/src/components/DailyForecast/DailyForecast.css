@@ -1,0 +1,71 @@
+.df-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  transition: background 0.4s ease, transform 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(12px);
+}
+
+.df-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  background: var(--bg-card-hover);
+}
+
+.df-title {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.df-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.df-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.df-day {
+  font-size: 13px;
+  color: var(--text-secondary);
+  width: 56px;
+  flex-shrink: 0;
+}
+
+.df-icon {
+  font-size: 18px;
+}
+
+.df-rain {
+  font-size: 11px;
+  color: var(--text-accent);
+  margin-left: auto;
+}
+
+.df-temps {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.df-temp-max {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.df-temp-min {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--text-muted);
+}

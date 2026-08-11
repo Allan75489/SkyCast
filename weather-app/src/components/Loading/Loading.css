@@ -1,25 +1,120 @@
-    .loading-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 64px 20px;
-    gap: 16px;
-    }
+.skeleton-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .loading-icon {
-    font-size: 52px;
-    animation: pulse 1.5s ease-in-out infinite;
-    }
+.skeleton {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+}
 
-    .loading-text {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    }
+.skeleton-main {
+  padding: 36px;
+}
 
-    @keyframes pulse {
-    0%, 100% { opacity: 0.3; transform: scale(0.95); }
-    50% { opacity: 1; transform: scale(1.05); }
-    }
+.skeleton-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.skeleton-line {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    var(--bg-input-focus) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-city {
+  width: 180px;
+  height: 26px;
+  margin-bottom: 8px;
+}
+
+.skeleton-time {
+  width: 130px;
+  height: 14px;
+}
+
+.skeleton-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    var(--bg-input-focus) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.skeleton-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.skeleton-temp {
+  width: 160px;
+  height: 90px;
+  margin: 24px 0;
+}
+
+.skeleton-cond {
+  width: 140px;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.skeleton-feels {
+  width: 100px;
+  height: 13px;
+}
+
+.skeleton-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.skeleton-stats .skeleton-line {
+  height: 40px;
+}
+
+.skeleton-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.skeleton-card {
+  height: 220px;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 640px) {
+  .skeleton-main {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .skeleton-bottom {
+    grid-template-columns: 1fr;
+  }
+}

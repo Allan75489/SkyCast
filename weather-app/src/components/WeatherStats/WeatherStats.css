@@ -1,0 +1,27 @@
+.ws-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.ws-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.ws-stat-value {
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(16px, 3vw, 22px);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.ws-stat-unit {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

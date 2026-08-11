@@ -1,0 +1,35 @@
+.hist-wrap {
+  margin-bottom: 28px;
+}
+
+.hist-title {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.hist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hist-chip {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.hist-chip:hover {
+  background: var(--bg-input-focus);
+  border-color: var(--border-focus);
+  color: var(--text-secondary);
+}
